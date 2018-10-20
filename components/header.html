@@ -1,0 +1,96 @@
+<div style="height: 34px; background: #222;">
+    <div class="y-box wtopbar">
+        <ul class="y-left">
+            <li class="tb-item"> <a class="tb-link" href="http://app.toutiao.com/news_article/" target="_blank"
+                    ga_event="mh_nav_others">下载APP</a>
+            </li>
+            <li class="tb-item weather"> <a class="tb-link" href="javascript:;"> <span>&nbsp;北京</span> <span class="city_state">多云</span>
+                    <span class="city_temperature"> <em>7</em>° &nbsp;/&nbsp; <em>18</em>° </span> <i class="y-icon icon-more"></i>
+                </a>
+                <div class="weather-box">
+                    <div riot-tag="weather" class="y-weather">
+                        <div class="w-header"> <span class="y-icon icon-location" ga_event="mh_change_city">&nbsp;北京</span>
+                            <span class="wind">南风1级</span> <span class="air" style="background: #ff9f2d">轻度 115</span>
+                        </div>
+                        <ul class="y-box days-weather show">
+                            <li class="y-left day"> <span class="title">今天</span>
+                                <div title="多云" class="weather-icon weather-icon-31"></div> <span class="temperature">
+                                    <em>7</em>° / <em>18</em>° </span>
+                            </li>
+                            <li class="y-left day"> <span class="title">明天</span>
+                                <div title="多云" class="weather-icon weather-icon-1"></div> <span class="temperature">
+                                    <em>7</em>° / <em>18</em>° </span>
+                            </li>
+                            <li class="y-left day"> <span class="title">后天</span>
+                                <div title="多云" class="weather-icon weather-icon-1"></div> <span class="temperature">
+                                    <em>6</em>° / <em>19</em>° </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="y-right">
+            <li class="tb-item userbox">
+                <div riot-tag="wuserbox" abtype="0" pageid="/news_finance/">
+                    <div class="y-box wuserbox">
+                        <div class="nav-login"> <a ga_event="nav_login" href="javascript:;"> <span style="color: #fff">登录</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="tb-item"> <a class="tb-link" href="javascript:void(0)">反馈</a> </li>
+            <li class="tb-item"> <a class="tb-link" href="https://mp.toutiao.com/profile_introduction/infringement/complain"
+                    ga_event="mh_nav_complain" target="_blank">投诉侵权</a> </li>
+            <li class="tb-item more"> <a class="tb-link" href="/about/">头条产品</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    $('.weather').hover(function() {
+        $('.weather-box').css('display', 'block')
+    }, function() {
+        $('.weather-box').css('display', 'none')
+    })
+    $.getJSON('../data/weather.json', function(res) {
+        console.log(res)
+        var data = res.data.weather
+        $('.weather').html(function() {
+            var tomorrow = ''
+            forecast_list = data.forecast_list.slice(1,4)
+            for(let i = 0; i < forecast_list.length; i++) {
+                tomorrow += '<li class="y-left day"> <span class="title">' 
+                    + forecast_list[i].date 
+                    + '</span><div title="' + forecast_list[i].condition 
+                    + '" class="weather-icon weather-icon-' 
+                    + forecast_list[i].weather_icon_id 
+                    +'"></div> <span class="temperature"><em>' 
+                    + forecast_list[i].low_temperature 
+                    + '</em>° / <em>' 
+                    + forecast_list[i].high_temperature 
+                    + '</em>° </span></li>'
+            }
+            var str = '<a class="tb-link" href="javascript:;"> <span>&nbsp;' 
+                + data.city_name 
+                + '</span> <span class="city_state">' 
+                + data.current_condition 
+                + '</span><span class="city_temperature"> <em>' 
+                + data.low_temperature 
+                + '</em>° &nbsp;/&nbsp; <em>' 
+                + data.high_temperature 
+                + '</em>° </span> <i class="y-icon icon-more"></i></a><div class="weather-box"><div riot-tag="weather" class="y-weather"><div class="w-header"> <span class="y-icon icon-location" ga_event="mh_change_city">&nbsp;' 
+                + data.city_name 
+                + '</span><span class="wind">' 
+                + data.wind_direction 
+                + data.wind_level
+                + '级</span> <span class="air" style="background: #ff9f2d">' + data.quality_level 
+                + data.aqi 
+                + '</span></div><ul class="y-box days-weather show">' 
+                + tomorrow
+                +'</ul></div></div>'
+            return str
+        })
+    })
+</script>

@@ -1,0 +1,565 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-width: 1220px;
+    overflow-x: hidden;
+}
+
+em {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+a:hover {
+    color: #406599;
+}
+
+ul {
+    list-style: none;
+}
+
+.y-wrap {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+    z-index: 1;
+}
+
+#header {
+    width: 100%;
+    background: #fff;
+    margin-bottom: 16px;
+    z-index: 2;
+}
+
+.y-wrap .y-box {
+    display: block;
+}
+
+.y-weather {
+    padding: 4px;
+    color: #444;
+    width: 280px;
+    height: 124px;
+    z-index: 20;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+}
+
+.y-weather .w-header {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.y-weather .w-header .icon-location {
+    padding-left: 10px;
+    cursor: pointer;
+    color: #406599;
+    font-size: 13px;
+}
+
+.y-weather .w-header .wind {
+    margin: 0 10px;
+}
+
+.y-weather .w-header .air {
+    color: #fff;
+    border-radius: 4px;
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 4px;
+}
+
+.y-weather .show {
+    display: block !important;
+}
+
+.y-weather .days-weather {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.y-weather .days-weather .day {
+    display: inline-block;
+    width: 33.3333333%;
+}
+
+.y-weather .days-weather .title {
+    color: #999;
+    line-height: 24px;
+}
+
+.y-weather .days-weather span {
+    display: block;
+    text-align: center;
+}
+
+.y-weather .weather-icon {
+    margin: auto;
+    width: 48px;
+    height: 48px;
+}
+
+.y-weather .days-weather .temperature {
+    white-space: nowrap;
+    line-height: 24px;
+}
+
+.y-wrap .y-box::after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.wtopbar {
+    position: relative;
+    height: 34px;
+    line-height: 34px;
+    background: #222;
+    font-size: 14px;
+    color: #fff;
+}
+
+.y-wrap .y-left {
+    float: left;
+}
+
+.wtopbar .tb-item:first-child {
+    border: 0;
+}
+
+.wtopbar .tb-item {
+    position: relative;
+    float: left;
+    height: 34px;
+}
+
+.wtopbar .weather .city_temperature em {
+    position: relative;
+    margin-right: 2px;
+    font-style: normal
+}
+
+.wtopbar .tb-link {
+    padding: 0 10px;
+    color: #fff;
+}
+
+.wtopbar .weather {
+    position: relative;
+}
+
+.wtopbar .weather .weather-box {
+    display: none;
+    position: absolute;
+    top: 34px;
+    z-index: 20;
+}
+
+.y-wrap .y-right {
+    float: right;
+}
+
+.wtopbar .tb-item:first-child {
+    border: 0;
+}
+
+.wtopbar .userbox {
+    margin-left: 14px;
+    height: 34px;
+}
+
+.wtopbar .tb-item {
+    position: relative;
+    float: left;
+    border-left: 1px solid #3a3a3a;
+}
+
+.y-wrap .y-box {
+    display: block;
+}
+
+.wuserbox {
+    position: relative;
+    font-size: 14px;
+    padding-right: 14px;
+    color: #fff;
+}
+
+.wuserbox .nav-login {
+    position: relative;
+    background-color: #ED4040;
+    color: #fff;
+    width: 68px;
+    text-align: center;
+    z-index: 10;
+}
+
+.y-wrap .y-box::after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.y-wrap .y-box {
+    display: block;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    min-height: 1500px;
+}
+
+.container .index-channel {
+    width: 110px;
+    height: 600px;
+    padding-right: 30px;
+    background-color: #fff;
+}
+
+.wchannel {
+    width: 110px;
+}
+
+.wchannel .logo {
+    display: block;
+    width: 110px;
+    height: 28px;
+    margin-bottom: 16px;
+}
+
+.wchannel .logo img {
+    width: 108px;
+    height: 27px;
+}
+
+.wchannel-item {
+    display: block;
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #444;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+
+.wchannel-item.active {
+    background-color: #ed4040;
+    color: #fff;
+}
+
+.container .index-content {
+    width: 660px;
+}
+
+.subchannel {
+    height: 38px;
+    width: 100%;
+    z-index: 50;
+    margin-bottom: 16px;
+}
+
+.subchannel .sub-list {
+    top: -50px;
+    background: #fff;
+    height: 38px;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.subchannel .sub-item:first-child {
+    margin-left: 0 !important;
+}
+
+.subchannel .sub-selected {
+    color: #f85959;
+    border-bottom: 2px solid #f85959;
+}
+
+.subchannel .sub-item {
+    line-height: 38px;
+    font-size: 16px;
+    display: inline-block;
+    color: #444;
+    margin-left: 33px;
+    background: #fff;
+}
+
+.container .index-modules {
+    width: 340px;
+}
+
+.y-wrap .y-right {
+    float: right;
+}
+
+.container .index-modules .module-inner {
+    width: 340px;
+    min-height: 600px;
+}
+
+.container .index-modules .module-inner .module {
+    width: 340px;
+    border-top: 2px solid #ed4040;
+    background-color: #f4f5f6;
+    margin-bottom: 16px;
+}
+
+.container .index-modules .module-inner .news-head {
+    margin-bottom: 6px;
+}
+
+.container .index-modules .module-inner .module-head {
+    color: #222;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.container .index-modules .module-inner .news-content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container .index-modules .module-inner .news-list {
+    padding: 8px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.container .index-modules .module-inner .news-link {
+    display: block;
+    overflow: hidden;
+}
+
+.container .index-modules .module-inner .news-pic {
+    width: 60px;
+    height: 60px;
+    margin-right: 12px;
+    float: left;
+}
+
+.container .index-modules .module-inner .module-pic {
+    overflow: hidden;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container .index-modules .module-inner .news-pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.container .index-modules .module-inner .news-inner {
+    height: 60px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.container .index-modules .module-inner .news-inner p {
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 20px;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.feedBox .wcommonFeed {
+    position: relative;
+}
+
+.feedBox .wcommonFeed .item {
+    position: relative;
+}
+
+.feedBox .wcommonFeed .item-inner {
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.feedBox .wcommonFeed .normal.rbox {
+    float: right;
+    height: 102px;
+    width: 480px;
+}
+
+.feedBox .wcommonFeed .normal {
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.feedBox .wcommonFeed .lbox {
+    position: relative;
+    float: left;
+}
+
+.feedBox .wcommonFeed .normal::before {
+    content: '';
+    width: 0;
+    font-size: 0;
+    height: 100%;
+    visibility: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.feedBox .wcommonFeed .normal .rbox-inner {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.feedBox .wcommonFeed .lbox {
+    position: relative;
+    float: left;
+}
+
+.feedBox .wcommonFeed .title-box {
+    display: block;
+    font-size: 20px;
+    color: #000042;
+    line-height: 1.3;
+    margin-bottom: 4px;
+    font-weight: 700;
+    max-height: 52px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.feedBox .wcommonFeed .footer {
+    font-size: 12px;
+    color: #999;
+    height: 18px;
+    line-height: 18px;
+    margin-top: 10px;
+}
+
+.feedBox .wcommonFeed .title-box a {
+    color: #222;
+}
+
+.feedBox .wcommonFeed .link {
+    color: #4f5157;
+}
+
+.feedBox .wcommonFeed .lbox .img-wrap {
+    display: block;
+    width: 156px;
+    height: 100px;
+    line-height: 100px;
+    overflow: hidden;
+}
+
+.feedBox .wcommonFeed .img-wrap {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.feedBox .wcommonFeed .lbox .img-wrap>img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.feedBox .wcommonFeed .img-wrap img {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .5s ease-out .1s;
+    transition: all .5s ease-out .1s;
+}
+
+.feedBox .wcommonFeed .lbtn {
+    float: left;
+    display: inline-block;
+    color: #777;
+    font-size: 14px;
+}
+
+.feedBox .wcommonFeed .lbtn.media-avatar {
+    position: relative;
+    color: #fff;
+    margin-right: 2px;
+    width: 18px;
+    height: 18px;
+    line-height: 17px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.feedBox .wcommonFeed .lbtn.media-avatar>img {
+    width: 100%;
+    height: 100%;
+}
+
+.feedBox .wcommonFeed .lbtn {
+    float: left;
+    display: inline-block;
+    color: #777;
+    font-size: 14px;
+}
+
+.feedBox .wcommonFeed .dislike {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 2px;
+    text-align: center;
+    background-color: #fff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.feedBox .wcommonFeed .dislike i {
+    font-size: 16px;
+    color: #ddd;
+    top: 2px;
+    font-style: normal
+}
+
+.feedBox .wcommonFeed .dislike:hover {
+    color: #fff;
+    background-color: #f85959;
+}
+
+.y-icon.icon-dislikenewfeed::before {
+    content: "x";
+}
+
+.feedBox .wcommonFeed .link.title:hover {
+    color: #406599;
+}

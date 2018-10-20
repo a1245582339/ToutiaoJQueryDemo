@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" href="./css/weather.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="y-wrap">
+		<div id="header">
+			
+		</div>
+		<div class="y-box container">
+			<div class="y-left index-channel">
+				<div riot-tag="wchannel">
+					<div ga_event="left-channel-click" class="wchannel "> <a class="logo" href="/"> <img src="//s3.pstatp.com/toutiao/resource/ntoutiao_web/static/image/logo_201f80d.png"
+							 alt=""> </a>
+						<ul>
+							<li onclick=""> <a class="wchannel-item " href="/" target="" ga_event="channel_recommand_click"> <span>推荐</span>
+								</a> </li>
+							<li onclick=""> <a class="wchannel-item " href="https://365yg.com/" target="_blank" ga_event="channel_video_click">
+									<span>阳光宽频</span> </a> </li>
+							<li onclick=""> <a class="wchannel-item " href="/ch/news_hot/" target="" ga_event="channel_hot_click"> <span>热点</span>
+								</a> </li>
+							<li onclick=""> <a class="wchannel-item " href="/ch/news_image/" target="_blank" ga_event="channel_image_click">
+									<span>图片</span> </a> </li>
+							<li onclick=""> <a class="wchannel-item " href="/ch/news_tech/" target="" ga_event="channel_technology_click">
+									<span>科技</span> </a> </li>
+							<li onclick=""> <a class="wchannel-item " href="/ch/news_entertainment/" target="" ga_event="channel_entertainment_click">
+									<span>娱乐</span> </a> </li>
+							<li onclick=""> <a class="wchannel-item " href="/ch/news_game/" target="" ga_event="channel_game_click"> <span>游戏</span>
+								</a> </li>
+							<li onclick=""> <a class="wchannel-item " href="/ch/news_sports/" target="" ga_event="channel_sports_click">
+									<span>体育</span> </a> </li>
+							<li onclick=""> <a class="wchannel-item " href="/ch/news_car/" target="" ga_event="channel_car_click"> <span>汽车</span>
+								</a> </li>
+							<li onclick=""> <a class="wchannel-item active" href="/ch/news_finance/" target="" ga_event="channel_finance_click">
+									<span>财经</span> </a> </li>
+							<li onclick=""> <a class="wchannel-item " href="/ch/funny/" target="" ga_event="channel_funny_click"> <span>搞笑</span>
+								</a> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="y-left index-content">
+				<div riot-tag="subchannel" id="subchannel" class="subchannel">
+					<ul name="subchannel" style="width: 660px;" ga_event="subchannel_click" class="sub-list ">
+						<li class="sub-item sub-selected"> <a href="/ch/news_finance/">全部</a> </li>
+						<li class="sub-item "> <a href="/ch/investment/">投资</a> </li>
+						<li class="sub-item "> <a href="/ch/stock_channel/">股票</a> </li>
+						<li class="sub-item "> <a href="/ch/finance_management/">理财</a> </li>
+						<li class="sub-item "> <a href="/ch/macro_economic/">宏观经济</a> </li>
+						<!--riot placeholder-->
+					</ul>
+				</div>
+				<div>
+					<div class="feedBox" name="feedBox">
+						<div riot-tag="wcommonFeed" category="news_finance" abtype="0">
+							<div class="wcommonFeed">
+								<ul>
+									<!-- <li class="item" ga_event="wenda_item_click" ad_id="" qihu_ad_id="" ad_track="" group_id="6502356873339994381">
+										<span id="ad_extra" style="display:none;"></span>
+										<div class="item-inner y-box">
+											<div class="normal rbox ">
+												<div class="rbox-inner">
+													<div class="title-box" ga_event="wenda_title_click"> <a class="link title" target="_blank" href="/group/6502356873339994381/">
+															你愿意把十万元人民币存入支付宝，还是存入微信钱包？为什么？ </a> </div>
+													<div class="y-box footer">
+														<div class="y-left">
+															<div class="y-left"> <a target="_blank" class="lbtn media-avatar avatar-bg-1" href="/search/?keyword=悟空问答"
+																 ga_event="wenda_avatar_click"><img alt="" src="//p98.pstatp.com/large/b7270004b44f59e093be"></a> <a class="lbtn source" target="_blank" href="/search/?keyword=悟空问答"
+																 ga_event="wenda_name_click">&nbsp;悟空问答&nbsp;⋅</a> </div> <span class="lbtn">&nbsp;刚刚</span>
+														</div>
+														<div class="y-right"> <span class="dislike" data-groupid="6502356873339994381" ga_event="wenda_dislike_click">
+																不感兴趣 <i class="y-icon icon-dislikenewfeed"></i> </span> </div>
+													</div>
+												</div>
+											</div>
+											<div class="lbox" ga_event="wenda_img_click"> <a class="img-wrap" target="_blank" href="/group/6502356873339994381/">
+													<img alt="" src="//p98.pstatp.com/list/190x124/4a320009eb9d2d284673"> </a> </div>
+										</div>
+									</li> -->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="y-right index-modules" style="padding-top: 37px;">
+				<div id="module-inner" class="module-inner">
+					<div>
+						<div id="m-hotNews">
+							<div riot-tag="hotNews" class="hotNews module" ga_event="click_hot_news">
+								<div class="module-head news-head"> 24小时热闻 </div>
+								<ul class="news-content">
+									<!-- <li class="news-list"> <a target="_blank" class="news-link" href="/group/6614347619399369230/">
+											<div class="module-pic news-pic"><img src="//p98.pstatp.com/list/240x240/pgc-image/15400227667822168ab6fca"></div>
+											<div class="news-inner">
+												<p class="module-title">黑龙江大庆脱逃人员疑“老赖” 同村人多年未见他回家</p>
+											</div>
+										</a> </li> -->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/script.js"></script>
+<script>
+	$('#header').load('./components/header.html')
+</script>
+
+</html>

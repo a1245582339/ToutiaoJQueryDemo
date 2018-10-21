@@ -1,5 +1,5 @@
 (function () {
-    $.getJSON("../data/news.json", function (res) {
+    $.getJSON("./news.json", function (res) {
         var data = res.data;
         $('.wcommonFeed>ul').html(function () {
             var str = ''
@@ -28,7 +28,7 @@
             }
             return str
         })
-        $.getJSON("../data/hot.json", function(res) {
+        $.getJSON("./hot.json", function(res) {
             var data = res.data;
             $('.news-content').html(function() {
                 var str = '';
